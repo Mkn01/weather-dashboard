@@ -5,20 +5,21 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel "stylesheet" href="./assets/style.css"/>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <title>Weather Dashboard</title>
   </head>
-
+  <!-- header -->
   <body>
     <header class="header" id="header">
       <h1 class="title">Weather Dashboard</h1>
     </header>
-
+    <!-- search bar -->
     <form>
       <div><h2>Enter city</h2></div>
-      <input type="city" />
-      <button>show</button>
+      <input type="city" id="city" />
+      <button id="showBtn">show</button>
     </form>
-
+    <!-- current weather section -->
     <section>
       <div>
         <ul city name>
@@ -36,7 +37,7 @@
         </ul>
       </div>
     </section>
-
+    <!-- next 5 days section -->
     <section>
       <div>
         <ul>
