@@ -1,12 +1,21 @@
 //Global declarations
+document.getElementById("weatherSection").hidden = true;
+document.getElementById("fiveDays").hidden = true;
 const apiKey = "52f454eaf054eab60d1845136494f9f1";
 const weatherForCityUrl = "https://api.openweathermap.org";
+
+function renderWeatherInfo() {
+  var displayCurrentWeather = (document.getElementById(
+    "weatherSection"
+  ).hidden = false);
+  var displayNextFiveDays = document.getElementById("fiveDays");
+}
 
 function fetchWeather(location) {
   var { lat } = location;
   var { lon } = location;
   var city = location.name;
-  var apiUrl = `${weatherApiRootUrl}/data/2.5/onecall?lat=${lat}&lon=${lon}&units=imperial&exclude=minutely,hourly&appid=${weatherApiKey}`;
+  var apiUrl = `${weatherForCityUrl}/data/2.5/onecall?lat=${lat}&lon=${lon}&units=imperial&exclude=minutely,hourly&appid=${apiKey}`;
 
   fetch(apiUrl)
     .then(function (res) {
@@ -18,6 +27,7 @@ function fetchWeather(location) {
     .catch(function (err) {
       console.error(err);
     });
+  renderWeatherInfo();
 }
 
 function fetchWeatherInfo(search) {
