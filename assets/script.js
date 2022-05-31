@@ -4,13 +4,6 @@ document.getElementById("fiveDays").hidden = true;
 const apiKey = "52f454eaf054eab60d1845136494f9f1";
 const weatherForCityUrl = "https://api.openweathermap.org";
 
-function renderWeatherInfo() {
-  var displayCurrentWeather = (document.getElementById(
-    "weatherSection"
-  ).hidden = false);
-  var displayNextFiveDays = document.getElementById("fiveDays");
-}
-
 function fetchWeather(location) {
   var { lat } = location;
   var { lon } = location;
@@ -49,6 +42,14 @@ function fetchWeatherInfo(search) {
       console.error(err);
     });
 }
+function renderWeatherInfo() {
+  var displayCurrentWeather = (document.getElementById $(
+    "#weatherSection");
+    $("#showBtn").on ("click", function (fetchWeatherInfo){
+      hiddenBox.show();
+      
+    }); 
+
 // user input value is validated if city is inputted api will be called to find longitude and latitude of city
 const searchForWeather = () => {
   const currentCity = $("#city").val();
