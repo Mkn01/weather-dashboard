@@ -7,6 +7,11 @@
   font-style: oblique;
   font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
   font-size: xx-large;
+  background-color: blanchedalmond;
+  margin-top: 0px;
+  margin-bottom: 10px;
+  padding-top: 5px;
+  padding-bottom: 5px;
 }
 .form {
   background-color: beige;
@@ -15,4 +20,27 @@
 }
 .searchbar {
   background-color: rgb(12, 11, 11);
+}
+
+.currentWeather {
+  background-color: beige;
+  border: 20px;
+  margin-top: -20px;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  flex: auto;
+  flex-direction: row;
+}
+
+.nextFiveDays {
+  background-color: beige;
+  border: 20px;
+  margin-top: 10px;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  flex: auto;
+  flex-direction: row;
+}
+
+.day {
 }
