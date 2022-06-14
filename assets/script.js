@@ -3,8 +3,9 @@ document.getElementById("weatherSection").hidden = true;
 document.getElementById("fiveDays").hidden = true;
 const apiKey = "52f454eaf054eab60d1845136494f9f1";
 const weatherForCityUrl = "https://api.openweathermap.org";
-
+const appendToHistory = () => {};
 function fetchWeather(location) {
+  console.log(location);
   var { lat } = location;
   var { lon } = location;
   var city = location.name;
@@ -15,43 +16,42 @@ function fetchWeather(location) {
       return res.json();
     })
     .then(function (data) {
-      renderItems(city, data);
+      console.log(data);
+      renderWeatherInfo(city, data);
     })
     .catch(function (err) {
       console.error(err);
     });
-  renderWeatherInfo();
 }
 
-function fetchWeatherInfo(search) {
-  var apiUrl = `${weatherForCityUrl}/geo/1.0/direct?q=${search}&limit=5&appid=${apiKey}`;
-
+const fetchWeatherInfo = (search) => {
+  const apiUrl = `${weatherForCityUrl}/data/2.5/weather?q=${search}&appid=${apiKey}`;
   fetch(apiUrl)
-    .then(function (res) {
+    .then((res) => {
       return res.json();
     })
     .then(function (data) {
-      if (!data[0]) {
+      if (data.cod !== 200) {
         alert("Location not found");
       } else {
         appendToHistory(search);
-        fetchWeather(data[0]);
+        fetchWeather(data.coord);
       }
     })
     .catch(function (err) {
       console.error(err);
     });
+};
+function renderWeatherInfo(city, data) {
+  const todaysWeather = data.daily[0];
+  var displayCurrentWeather = document.getElementById("weatherSection");
+  $("#showBtn").on("click", function (fetchWeatherInfo) {
+    hiddenBox.show();
+  });
 }
-function renderWeatherInfo() {
-  var displayCurrentWeather = (document.getElementById $(
-    "#weatherSection");
-    $("#showBtn").on ("click", function (fetchWeatherInfo){
-      hiddenBox.show();
-      
-    }); 
-
 // user input value is validated if city is inputted api will be called to find longitude and latitude of city
-const searchForWeather = () => {
+const searchForWeather = (event) => {
+  event.preventDefault();
   const currentCity = $("#city").val();
   console.log(currentCity);
   fetchWeatherInfo(currentCity);
