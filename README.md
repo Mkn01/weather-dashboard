@@ -4,24 +4,34 @@
 
 This application is a Weather Dashboard. When the user inputs a city in the search bar and the show button is clicked the OpenWeather Api is called and displays the current and the next five days weather information for that city.
 
-## Deployed URL
+## User Story
 
-You can find the application deployed to github pages (https://mkn01.github.io/code-quiz/)
+```
+AS A traveler
+I WANT to see the weather outlook for multiple cities
+SO THAT I can plan a trip accordingly
+```
+
+## Deployment
+
+Visit GitHub repository [here](https://github.com/Mkn01/weather-dashboard/tree/dev)
+
+Visit Deployed app on git hub pages [here](https://mkn01.github.io/weather-dashboard)
 
 ## Technologies
 
 - HTML
 - CSS
 - GitHub Pages
-- Java script
+- Javascript
 - Google chrome
 
 ## Screenshots
 
 ### Desktop Viewport
 
-! [code-Quiz]()
+[Weather-Dashboard Desktop](assets/img/weather-desktop.png)
 
 ### Mobile Viewport
 
-![code-Quiz mobile]()
+[Weather-Dashboard Mobile](assets/img/weather-mobile.png)
