@@ -1,49 +1,9 @@
 * {
-  background-color: azure;
-}
-.header {
-  text-align: center;
-  size: 50px;
-  color: rgb(15, 54, 54);
-}
-.title {
-  font-style: oblique;
-  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
-  font-size: xx-large;
-  background-color: blanchedalmond;
-  margin-top: 0px;
-  margin-bottom: 10px;
-  padding-top: 5px;
-  padding-bottom: 5px;
-}
-.form {
-  background-color: beige;
-  margin-bottom: 40px;
-  padding: 60px;
-}
-.searchbar {
-  background-color: rgb(255, 255, 255);
+  box-sizing: border-box;
 }
 
-.currentWeather {
-  background-color: beige;
-  border: 20px;
-  margin-top: -20px;
-  padding-top: 5px;
-  padding-bottom: 5px;
-  flex: auto;
-  flex-direction: row;
-}
-
-.nextFiveDays {
-  background-color: beige;
-  border: 20px;
-  margin-top: 10px;
-  padding-top: 5px;
-  padding-bottom: 5px;
-  flex: auto;
-  flex-direction: row;
-}
-
-.day {
+.forecast-card {
+  width: 18rem;
+  background-color: #333399;
+  color: #fff;
 }
